@@ -10,12 +10,12 @@
         $(document).ready(function() { sgvizler.containerDrawAll(); });
       </script></head>
    <body>
-      <div id="logo"><img src="http://beta.data2000.no/sgvizler/misc/image/mr.sgvizler.png" alt="mr.sgvizler.png"></a><br>Mr. Sgvizler
+      <!--<div id="logo"><img src="http://beta.data2000.no/sgvizler/misc/image/mr.sgvizler.png" alt="mr.sgvizler.png"></a><br>Mr. Sgvizler-->
    </body>
    <script>
      var graphCounter = 0
      var drawGraph = function(endpoint, query, chartType) {
-          console.log('called');
+          document.body.innerHTML = "";
           var newDiv = '<div id="sgvzl_example_query';
           newDiv += graphCounter.toString();
           newDiv += '" data-sgvizler-endpoint="';
