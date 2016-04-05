@@ -1,0 +1,94 @@
+body {
+    font-family: Arial;
+    margin: 0 auto;
+    padding: 0% 13% 10% 15%;
+}
+
+
+h2 {
+    margin-top: 100px;
+    border-bottom: 1px solid #ccc;
+    clear: both;
+}
+
+
+
+h1.title {
+    font-size: 500%;
+    text-align: center;
+}
+
+div#menu {
+    position: fixed;
+    top: 15px;
+    right: 10px;
+    background-color: #fff;
+    opacity: 0.8;
+    font-size: 80%;
+}
+div#menu ul {
+    margin: 2px 0px 10px 16px;
+    padding: 0;
+}
+
+div#quick-links::before {
+    content: "Quick links";
+    font-weight: bold;
+}
+div#table-of-contents h2 {
+    display: none;
+}
+div#text-table-of-contents::before {
+    content: "Contents";
+    font-weight: bold;
+}
+
+
+th {
+    text-align: left;
+}
+
+td {
+    padding: 1px 6px 2px 6px;
+}
+
+pre.src {
+    color: #eee;
+    background-color: #444;
+}
+
+div#outline-container-charts div.figure {
+    float: right;
+    margin: 0px 5px 0 5px;
+    padding: 0;
+    text-align: center;
+    clear: right;
+}
+
+div#outline-container-charts div.figure img {
+    width: 200px;
+}
+div#outline-container-charts span.figure-number {
+    display: none;
+}
+div#outline-container-charts div.figure p {
+    font-size: 85%;
+}
+
+div#text-screenshots div.figure {
+    float: left;
+    margin: 0px 5px 0 5px;
+    text-align: center;
+}
+
+div#text-screenshots span.figure-number {
+    display: none;
+}
+
+div#text-screenshots div.figure img {
+    width: 200px;
+}
+
+div#text-screenshots div.figure p {
+    font-size: 85%;
+}
