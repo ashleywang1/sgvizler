@@ -30,10 +30,10 @@
           $(document).ready(function() { sgvizler.containerDrawAll(); });
           graphCounter += 1;
      };
-     document.getElementById('logo').onclick = function (e) {
-          e.preventDefault();
-          document.body.innerHTML +='<div id="sgvzl_example_query"     data-sgvizler-endpoint="http://sws.ifi.uio.no/sparql/npd"     data-sgvizler-query="SELECT * WHERE { [] a npdv:NCSProductionPeriod ; npdv:year ?year ; npdv:producedNetOilMillSm ?Oil_millSm ; npdv:producedNetGasBillSm ?Gas_billSm ; npdv:producedNetNGLMillSm3 ?NGL_millSm3 ; npdv:producedNetCondensateMillSm3 ?Condensate_millSm3 ; npdv:producedWaterMillSm3 ?Water_millSm3 ; FILTER (xsd:int(?year) &lt; 2011) } ORDER BY ?year"     data-sgvizler-chart="google.visualization.ColumnChart"     data-sgvizler-loglevel="2"     style="width:800px; height:400px;"/>';
-          $(document).ready(function() { sgvizler.containerDrawAll(); });
-     }
+     // document.getElementById('logo').onclick = function (e) {
+     //      e.preventDefault();
+     //      document.body.innerHTML +='<div id="sgvzl_example_query"     data-sgvizler-endpoint="http://sws.ifi.uio.no/sparql/npd"     data-sgvizler-query="SELECT * WHERE { [] a npdv:NCSProductionPeriod ; npdv:year ?year ; npdv:producedNetOilMillSm ?Oil_millSm ; npdv:producedNetGasBillSm ?Gas_billSm ; npdv:producedNetNGLMillSm3 ?NGL_millSm3 ; npdv:producedNetCondensateMillSm3 ?Condensate_millSm3 ; npdv:producedWaterMillSm3 ?Water_millSm3 ; FILTER (xsd:int(?year) &lt; 2011) } ORDER BY ?year"     data-sgvizler-chart="google.visualization.ColumnChart"     data-sgvizler-loglevel="2"     style="width:800px; height:400px;"/>';
+     //      $(document).ready(function() { sgvizler.containerDrawAll(); });
+     // }
    </script>
 </html>
