@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <title>Sgvizler</title>
+      <meta charset="UTF-8">
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.js"></script><script type="text/javascript" src="https://www.google.com/jsapi"></script><script type="text/javascript" src="http://beta.data2000.no/sgvizler/release/0.6/sgvizler.min.js"></script><script type="text/javascript">sgvizler.prefix('npd', 'http://sws.ifi.uio.no/npd/');
+      sgvizler.prefix('npdv', 'http://sws.ifi.uio.no/vocab/npd#');
+      
+        $(document).ready(function() { sgvizler.containerDrawAll(); });
+      </script></head>
+   <body>
+      <!--<div id="logo"><img src="http://beta.data2000.no/sgvizler/misc/image/mr.sgvizler.png" alt="mr.sgvizler.png"></a><br>Mr. Sgvizler-->
+   </body>
+   <script>
+     var graphCounter = 0
+     var drawGraph = function(endpoint, query, chartType) {
+          document.body.innerHTML = "";
+          var newDiv = '<div id="sgvzl_example_query';
+          newDiv += graphCounter.toString();
+          newDiv += '" data-sgvizler-endpoint="';
+          newDiv += endpoint;
+          newDiv += '"  data-sgvizler-query="';
+          newDiv += query;
+          newDiv += '" data-sgvizler-chart="google.visualization.';
+          newDiv += chartType;
+          newDiv +='"  data-sgvizler-loglevel="2"  style="width:800px; height:400px;"/>';
+          // alert(newDiv);
+          document.body.innerHTML += newDiv;
+          $(document).ready(function() { sgvizler.containerDrawAll(); });
+          graphCounter += 1;
+     };
+     document.getElementById('logo').onclick = function (e) {
+          e.preventDefault();
+          document.body.innerHTML +='<div id="sgvzl_example_query"     data-sgvizler-endpoint="http://sws.ifi.uio.no/sparql/npd"     data-sgvizler-query="SELECT * WHERE { [] a npdv:NCSProductionPeriod ; npdv:year ?year ; npdv:producedNetOilMillSm ?Oil_millSm ; npdv:producedNetGasBillSm ?Gas_billSm ; npdv:producedNetNGLMillSm3 ?NGL_millSm3 ; npdv:producedNetCondensateMillSm3 ?Condensate_millSm3 ; npdv:producedWaterMillSm3 ?Water_millSm3 ; FILTER (xsd:int(?year) &lt; 2011) } ORDER BY ?year"     data-sgvizler-chart="google.visualization.ColumnChart"     data-sgvizler-loglevel="2"     style="width:800px; height:400px;"/>';
+          $(document).ready(function() { sgvizler.containerDrawAll(); });
+     }
+   </script>
+</html>
